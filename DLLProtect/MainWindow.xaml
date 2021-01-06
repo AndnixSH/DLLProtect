@@ -1,0 +1,19 @@
+﻿<Window x:Name="win" x:Class="DLLProtect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DLLProtect"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="DLLProtect" Height="210.243" Width="450" DragEnter="Window_DragEnter" AllowDrop="true" DragLeave="Window_DragLeave" DragOver="Window_DragOver" Drop="Window_Drop" Closed="win_Closed">
+    <Grid x:Name="grid" Height="175" VerticalAlignment="Top" >
+        <Button x:Name="protectBtn" Content="Protect" HorizontalAlignment="Left" Margin="90,87,0,0" VerticalAlignment="Top" Width="102" Height="23" Click="protectBtn_Click" IsEnabled="False"/>
+        <Button x:Name="unprotectBtn" Content="Unprotect" HorizontalAlignment="Left" Margin="248,88,0,0" VerticalAlignment="Top" Width="102" Height="23" Click="unprotectBtn_Click" IsEnabled="False"/>
+        <Button x:Name="selectFileBtn" Content="Select DLL file" HorizontalAlignment="Left" Margin="314,46,0,0" VerticalAlignment="Top" Width="100" Height="23" Click="selectFileBtn_Click" FontWeight="Bold"/>
+        <TextBox x:Name="pathTextBox" HorizontalAlignment="Left" Height="23" Margin="31,46,0,0" VerticalAlignment="Top" Width="266" IsReadOnly="True"/>
+        <Label x:Name="checkIfProtectedLbl" Content="File is protected" HorizontalAlignment="Center" Margin="146,144,148,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+        <CheckBox x:Name="backupFileChkBox" Content="Backup file" HorizontalAlignment="Left" Margin="179,125,0,0" VerticalAlignment="Top" ToolTip="If checked, the tool will backup original/protected file."/>
+        <Label Content="Select or drop a DLL file:" HorizontalAlignment="Left" Margin="146,15,0,0" HorizontalContentAlignment="Center" Background="White" BorderBrush="Black" Foreground="#000000" VerticalAlignment="Top" />
+    </Grid>
+</Window>
